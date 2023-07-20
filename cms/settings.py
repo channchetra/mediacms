@@ -6,14 +6,14 @@ DEBUG = False
 
 # PORTAL NAME, this is the portal title and
 # is also shown on several places as emails
-PORTAL_NAME = "MediaCMS"
+PORTAL_NAME = "AMS Video Portal"
 PORTAL_DESCRIPTION = ""
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "Europe/London"
+TIME_ZONE = "Asia/Phnom_Penh"
 
 # who can add media
 # valid options include 'all', 'email_verified', 'advancedUser'
-CAN_ADD_MEDIA = "all"
+CAN_ADD_MEDIA = "email_verified"
 
 # valid choices here are 'public', 'private', 'unlisted
 PORTAL_WORKFLOW = "public"
@@ -28,7 +28,7 @@ DEFAULT_THEME = "light"
 # not for user uploaded media!
 LOAD_FROM_CDN = False
 LOGIN_ALLOWED = True  # whether the login button appears
-REGISTER_ALLOWED = True  # whether the register button appears
+REGISTER_ALLOWED = False  # whether the register button appears
 UPLOAD_MEDIA_ALLOWED = True  # whether the upload media button appears
 CAN_LIKE_MEDIA = True  # whether the like media appears
 CAN_DISLIKE_MEDIA = True  # whether the dislike media appears
@@ -44,7 +44,7 @@ ALLOW_RATINGS = False
 ALLOW_RATINGS_CONFIRMED_EMAIL_ONLY = True
 
 # ip of the server should be part of this
-ALLOWED_HOSTS = ["*", "mediacms.io", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*", "ams.com.kh", "127.0.0.1", "localhost", "sovichetra.com", "video.ams.page"]
 
 FRONTEND_HOST = "http://localhost"
 # this variable - along with SSL_FRONTEND_HOST is used on several places
@@ -388,15 +388,15 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "mediacms",
-        "HOST": "127.0.0.1",
+        "HOST": "ams-vdo_db",
         "PORT": "5432",
-        "USER": "mediacms",
+        "USER": "ams-vdo",
         "PASSWORD": "mediacms",
     }
 }
 
 
-REDIS_LOCATION = "redis://127.0.0.1:6379/1"
+REDIS_LOCATION = "redis://default:mediacms@ams-vdo_redis:6379/1"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
