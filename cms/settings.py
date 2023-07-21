@@ -387,10 +387,10 @@ LOGGING = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mediacms",
+        "NAME": "ams-vdo",
         "HOST": "ams-vdo_db",
         "PORT": "5432",
-        "USER": "ams-vdo",
+        "USER": "postgres",
         "PASSWORD": "mediacms",
     }
 }
